@@ -17,7 +17,7 @@ function App() {
       </Box>
 
       <MostReqServ />
-      <Parallax imageUrl="../public/pexels-kpaukshtite-3273490.jpg" />
+      <Parallax imageUrl="/pexels-kpaukshtite-3273490.jpg" />
       <ImagesToRef />
       <AllServices services={servicesData} />
     </>
