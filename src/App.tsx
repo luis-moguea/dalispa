@@ -2,7 +2,6 @@
 import { useEffect, useState, Suspense, lazy } from "react";
 import { Box, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { servicesData } from "./data/servicesData";
 
 // Carga diferida de componentes
 const Navbar = lazy(() => import("./components/Navbar"));
