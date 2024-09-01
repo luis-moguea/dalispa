@@ -1,13 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
-body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    background-color: #faeffa;
-    font-family: "Roboto Flex", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #faeffa;
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  /* Configuración de la imagen de fondo */
+  background-image: 
+    url('/public/bg-wall.jpg'), /* Imagen de fondo principal */
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)); /* Superposición blanca con opacidad */
+  background-size: 
+    auto, /* Tamaño de la imagen de fondo principal */
+    auto; /* Tamaño de la superposición */
+  background-position: 
+    center, /* Posición de la imagen de fondo principal */
+    center; /* Posición de la superposición */
+  background-repeat: 
+    repeat, /* Repetir la imagen de fondo principal */
+    repeat; /* Repetir la superposición */
+
+    backdrop-filter: blur(7px); /* Ajusta el valor de desenfoque según sea necesario */
 }

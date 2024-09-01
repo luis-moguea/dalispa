@@ -49,9 +49,9 @@ function App() {
             alignItems="center"
             borderBottom="solid 1px"
             padding="1em"
-            position="fixed"
-            zIndex="9999"
-            backgroundColor="white"
+            position="fixed" /* Cambia 'relative' a 'fixed' */
+            zIndex="50" /* Asegúrate de que el z-index sea alto */
+            backgroundColor="white" /* Fondo sólido para evitar la mezcla con el desenfoque */
             top="0"
           >
             <NavCallToAction />
@@ -67,7 +67,7 @@ function App() {
             position="fixed"
             bottom="3%"
             right="3%"
-            zIndex="999"
+            zIndex="10000"
             width="60px"
             height="60px"
             cursor="pointer"

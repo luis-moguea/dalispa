@@ -1,5 +1,5 @@
 import logo from "../../public/waIcon.png"
-import s1 from "../../public/pexels-alex-hussein-1391461-2685089.jpg"
+import esmaltadoSemipermanente from "../../public/Esmaltado-Semipermanente.jpg"
 import s2 from "../../public/pexels-designecologist-1328535.jpg"
 import s3 from "../../public/pexels-designecologist-887352.jpg"
 import s4 from "../../public/pexels-element5-973405.jpg"
@@ -10,34 +10,44 @@ import s5 from "../../public/pexels-kpaukshtite-3273490.jpg"
 
 export const servicesData = [
     {
-        text: '"Me siento muy agradecido por la experiencia con Enviahora, muy diligentes en todo el proceso de envío, super recomendados!!! "',
-        image: logo,
-        alt: "envios-internacional-ship-shipment-baratos-estados-unidos-rapidos",
-        service: "Ernesto B."
+        name: "Esmaltado Semipermanente",
+        description: '"En Dalispa, el esmalte semipermanente ofrece un color vibrante y un brillo duradero que se mantiene impecable por semanas. Se seca rápidamente bajo una lámpara UV, lo que asegura una manicura resistente que conserva su apariencia fresca y elegante sin necesidad de retoques frecuentes. Ofrecemos una amplia gama de colores para que encuentres el tono ideal que complemente tu estilo. Además, disponemos de tres tipos de marcas, incluyendo una opción especialmente formulada para personas con piel sensible o que están pasando por tratamientos delicados."',
+        image: esmaltadoSemipermanente,
+        alt: "spa-uñas-nail-semi-tradicional-manicure-manicura-pedicura-pedicure-deeppower",
     },{
-        text: '"Excelente servicio, desde que me contacte con la asesora Sofía, ella fue muy atenta conmigo su atención es totalmente personalizada, 5 estrellas!!!"',
-        image: s1,
-        alt: "envios-internacional-ship-shipment-baratos-estados-unidos-rapidos",
-        service: "Cristina M."
+        name: "test",
+        description: '"Me siento muy agradecido por la experiencia con Enviahora, muy diligentes en todo el proceso de envío, super recomendados!!! "',
+        image: esmaltadoSemipermanente,
+        alt: "spa-uñas-nail-semi-tradicional-manicure-manicura-pedicura-pedicure-deeppower",
     },{
-        text: '"enviahoras international shipping is effortless and highly recommended, thanks Sophia"',
-        image: s2,
-        alt: "envios-internacional-ship-shipment-baratos-estados-unidos-rapidos",
-        service: "Benjamin P."
-    },{
-        text: '"Me encanta el servicio completo que ofrecen en enviahora y lo mejor de todo es que ofrecen recogida gratis y no toca salir jajaj"',
+        name: "test",
+        description: '"Me siento muy agradecido por la experiencia con Enviahora, muy diligentes en todo el proceso de envío, super recomendados!!! "',
         image: s3,
-        alt: "envios-internacional-ship-shipment-baratos-estados-unidos-rapidos",
-        service: "Carlos A."
+        alt: "spa-uñas-nail-semi-tradicional-manicure-manicura-pedicura-pedicure-deeppower",
     },{
-        text: '"Enviahora is my trusted shipping partner reliable, on time, and perfect for both personal and business shipments."',
+        name: "test",
+        description: '"Me siento muy agradecido por la experiencia con Enviahora, muy diligentes en todo el proceso de envío, super recomendados!!! "',
         image: s4,
-        alt: "envios-internacional-ship-shipment-baratos-estados-unidos-rapidos",
-        service: "Richard K."
+        alt: "spa-uñas-nail-semi-tradicional-manicure-manicura-pedicura-pedicure-deeppower",
     },{
-        text: '"Sam es el mejor asesor, él me ayudo a tramitar la documentación necesaria para mi envío y todo fue un exito, muchas gracias, recomendados al 100%"',
+        name: "test",
+        description: '"Me siento muy agradecido por la experiencia con Enviahora, muy diligentes en todo el proceso de envío, super recomendados!!! "',
         image: s5,
-        alt: "envios-internacional-ship-shipment-baratos-estados-unidos-rapidos",
-        service: "Estebán N."
+        alt: "spa-uñas-nail-semi-tradicional-manicure-manicura-pedicura-pedicure-deeppower",
+    },{
+        name: "test",
+        description: '"Me siento muy agradecido por la experiencia con Enviahora, muy diligentes en todo el proceso de envío, super recomendados!!! "',
+        image: s2,
+        alt: "spa-uñas-nail-semi-tradicional-manicure-manicura-pedicura-pedicure-deeppower",
+    },{
+        name: "test",
+        description: '"Me siento muy agradecido por la experiencia con Enviahora, muy diligentes en todo el proceso de envío, super recomendados!!! "',
+        image: s3,
+        alt: "spa-uñas-nail-semi-tradicional-manicure-manicura-pedicura-pedicure-deeppower",
+    },{
+        name: "test",
+        description: '"Me siento muy agradecido por la experiencia con Enviahora, muy diligentes en todo el proceso de envío, super recomendados!!! "',
+        image: s5,
+        alt: "spa-uñas-nail-semi-tradicional-manicure-manicura-pedicura-pedicure-deeppower",
     },
 ]
