@@ -24,8 +24,6 @@ const ImagesToRef = () => {
               key={index}
               alt={el.alt}
               image={el.image}
-              text={el.text}
-              service={el.service}
               ml={index !== 0 ? "50px" : "unset"}
             />
           ))}

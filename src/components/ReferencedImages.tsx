@@ -3,14 +3,14 @@ import { CSSProperties } from "react";
 import { motion } from "framer-motion";
 
 interface Props {
-  text: string;
+  name?: string;
   image: string;
   alt: string;
   ml: string;
-  service: string;
+  description?: string;
 }
 
-const ReferencedImages = ({ image, text, alt, service, ml }: Props) => {
+const ReferencedImages = ({ image, name, alt, description, ml }: Props) => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   const imageStyle: CSSProperties = {
@@ -55,7 +55,7 @@ const ReferencedImages = ({ image, text, alt, service, ml }: Props) => {
             textAlign="right"
             mt="10px"
           >
-            {text}
+            {name}
           </Text>
         </Box>
       </Box>
@@ -66,7 +66,7 @@ const ReferencedImages = ({ image, text, alt, service, ml }: Props) => {
         whiteSpace="nowrap"
         fontStyle="oblique"
       >
-        {service}
+        {description}
       </Text>
     </MotionBox>
   );
