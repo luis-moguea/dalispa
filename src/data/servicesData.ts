@@ -1,4 +1,3 @@
-import logo from "../../public/waIcon.png"
 import esmaltadoSemipermanente from "../../public/Esmaltado-Semipermanente.jpg"
 import s2 from "../../public/pexels-designecologist-1328535.jpg"
 import s3 from "../../public/pexels-designecologist-887352.jpg"
