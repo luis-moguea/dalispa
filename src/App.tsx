@@ -9,7 +9,6 @@ const NavCallToAction = lazy(() => import("./components/NavCallToAction"));
 const MostReqServ = lazy(() => import("./components/MostReqServ"));
 const ImagesToRef = lazy(() => import("./components/ImagesToRef"));
 const Parallax = lazy(() => import("./components/Parallax"));
-const AllServices = lazy(() => import("./components/AllServices"));
 const CenteredText = lazy(() => import("./components/CenteredText"));
 
 // Crear un componente Box animado
