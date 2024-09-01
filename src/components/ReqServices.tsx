@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 interface Props {
   name: string;
   image: string;
-  alt: string;
+  alt?: string;
   description?: string;
-  ml?: string;
+  ml: string;
 }
 
 const ReqServices = ({ name, image, alt, ml }: Props) => {
