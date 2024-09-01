@@ -60,7 +60,6 @@ function App() {
           <MostReqServ />
           <Parallax imageUrl="/pexels-kpaukshtite-3273490.jpg" />
           <ImagesToRef />
-          <AllServices services={servicesData} />
           <Image
             alt="spa-de-uñas-pies"
             src="../public/waIcon.png"
