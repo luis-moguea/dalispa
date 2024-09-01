@@ -14,18 +14,19 @@ interface AllServicesProps {
 
 const AllServices: React.FC<AllServicesProps> = ({ services }) => {
   return (
-    <Box padding={4}>
+    <Box p="1em" textAlign="center">
       <Heading marginBottom={6}>TODOS NUESTROS SERVICIOS</Heading>
       <Grid
+        p="1em"
         templateColumns={["1fr", "repeat(2, 1fr)"]} // Una columna en dispositivos pequeños, tres en dispositivos más grandes
-        gap={6} // Espacio entre los elementos
+        gap="20" // Espacio entre los elementos
         alignItems="center" // Centra los elementos en el eje vertical
       >
         {services.map((service, index) => (
           <GridItem
             key={index}
             textAlign="center"
-            padding={4}
+            padding="0.5em"
             border="1px solid #e2e8f0"
             borderRadius="md"
           >

@@ -5,8 +5,10 @@ import ReqServices from "./ReqServices";
 const MostReqServ = () => {
   return (
     <>
-      <Box>
-        <Heading>SERVICIOS MÁS RESERVADOS</Heading>
+      <Box mt="100px" p="1em">
+        <Heading fontStyle="italic" textAlign="center">
+          TODOS NUESTROS SERVICIOS
+        </Heading>
         <Box
           width="100%"
           display="flex"

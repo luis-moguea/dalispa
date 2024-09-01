@@ -6,9 +6,11 @@ interface ParallaxProps {
   height?: string; // Altura opcional para el contenedor de parallax
 }
 
-const Parallax: React.FC<ParallaxProps> = ({ imageUrl, height = "350px" }) => {
+const Parallax: React.FC<ParallaxProps> = ({ imageUrl, height = "200px" }) => {
   return (
     <Box
+      pt="1em"
+      pb="1em"
       height={height}
       backgroundImage={`url(${imageUrl})`}
       backgroundAttachment="fixed" // Fija la imagen para el efecto parallax

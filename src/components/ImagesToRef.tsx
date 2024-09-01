@@ -5,8 +5,8 @@ import ReferencedImages from "./ReferencedImages";
 const ImagesToRef = () => {
   return (
     <>
-      <Box>
-        <Heading>IMAGENES REFERENCIALES</Heading>
+      <Box p="1em">
+        <Heading textAlign="center">IMAGENES REFERENCIALES</Heading>
         <Box
           width="100%"
           display="flex"
