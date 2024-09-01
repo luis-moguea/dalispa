@@ -10,7 +10,7 @@ interface Props {
   ml?: string;
 }
 
-const ReqServices = ({ name, image, alt }: Props) => {
+const ReqServices = ({ name, image, alt, ml }: Props) => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   const imageStyle: CSSProperties = {
@@ -35,6 +35,7 @@ const ReqServices = ({ name, image, alt }: Props) => {
       borderTopLeftRadius="25px"
       borderTopRightRadius="25px"
       pb="10px"
+      ml={ml}
       minW="300px"
       minH="380px"
       maxW="300px"
