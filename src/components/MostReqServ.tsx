@@ -18,7 +18,7 @@ const MostReqServ = () => {
   };
 
   return (
-    <Box pt="20px">
+    <Box pt="113px">
       <Heading fontStyle="italic" textAlign="center">
         TODOS NUESTROS SERVICIOS
       </Heading>
