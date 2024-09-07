@@ -63,7 +63,7 @@ function App() {
             <Footer />
             <Image
               alt="spa-de-uñas-pies"
-              src="../public/waIcon.png"
+              src="/waIcon.png"
               position="fixed" // Usa sticky aquí
               bottom="5%"
               left="90%"
