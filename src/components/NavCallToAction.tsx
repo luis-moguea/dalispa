@@ -47,9 +47,9 @@ const NavCallToAction = () => {
   return (
     <Box width="100%" display="flex" gap="200px" alignItems="center">
       <Image
-        src="/pngegg (3).png"
-        width="100px"
-        height="70px"
+        src="/logo-dalispa.png"
+        width="118px"
+        height="100px"
         _hover={{ cursor: "pointer" }}
       />
       <Box display="flex" alignItems="center" gap="15px">

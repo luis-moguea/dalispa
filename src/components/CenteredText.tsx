@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 // Crea un componente Box animado
@@ -17,9 +17,14 @@ const CenteredText: React.FC = () => {
       animate={{ opacity: 0 }} // Opacidad final
       transition={{ duration: 1.2, delay: 1.2 }} // Duración y retraso de la animación
     >
-      <Text fontSize="2xl" fontFamily="Arial, sans-serif">
-        DaliSpa
-      </Text>
+      <Image
+        src="/logo-dalispa.png" // Reemplaza con la ruta de tu imagen
+        alt="spa-nails-unas-uñas-pedicura"
+        width="150px"
+        height="125px"
+        boxSize="150px" // Ajusta el tamaño de la imagen según necesites
+        objectFit="cover"
+      />
     </MotionBox>
   );
 };

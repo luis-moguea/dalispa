@@ -1,4 +1,3 @@
-// src/App.tsx
 import { useEffect, useState, Suspense, lazy } from "react";
 import { Box, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -10,6 +9,7 @@ const MostReqServ = lazy(() => import("./components/MostReqServ"));
 const ImagesToRef = lazy(() => import("./components/ImagesToRef"));
 const Parallax = lazy(() => import("./components/Parallax"));
 const CenteredText = lazy(() => import("./components/CenteredText"));
+const Testimonials = lazy(() => import("./components/Testimonials"));
 
 // Crear un componente Box animado
 const MotionBox = motion(Box);
@@ -46,10 +46,10 @@ function App() {
             justifyContent="space-between"
             alignItems="center"
             borderBottom="solid 1px"
-            padding="1em"
-            position="fixed" /* Cambia 'relative' a 'fixed' */
-            zIndex="50" /* Asegúrate de que el z-index sea alto */
-            backgroundColor="white" /* Fondo sólido para evitar la mezcla con el desenfoque */
+            padding="0.2em"
+            position="sticky" // Fijar el navbar en la parte superior
+            zIndex="10000" // Asegúrate de que el z-index sea alto
+            backgroundColor="white" // Fondo sólido para evitar la mezcla con el desenfoque
             top="0"
           >
             <NavCallToAction />
@@ -58,13 +58,14 @@ function App() {
           <MostReqServ />
           <Parallax imageUrl="/pexels-kpaukshtite-3273490.jpg" />
           <ImagesToRef />
+          <Testimonials />
           <Image
             alt="spa-de-uñas-pies"
             src="../public/waIcon.png"
-            position="fixed"
+            zIndex="999"
+            position="sticky"
             bottom="3%"
-            right="3%"
-            zIndex="10000"
+            left="93%"
             width="60px"
             height="60px"
             cursor="pointer"

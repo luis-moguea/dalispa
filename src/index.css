@@ -25,5 +25,5 @@ body {
     repeat, /* Repetir la imagen de fondo principal */
     repeat; /* Repetir la superposición */
 
-    backdrop-filter: blur(7px); /* Ajusta el valor de desenfoque según sea necesario */
+    backdrop-filter: blur(3px); /* Ajusta el valor de desenfoque según sea necesario */
 }
