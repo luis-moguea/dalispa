@@ -42,13 +42,13 @@ const NavCallToAction = () => {
     return () => clearInterval(interval); // Limpiar el intervalo al desmontar
   }, []);
 
-  const text = "Quiero Mi Cita con DaliSpa!";
+  const text = "Quiero Mi Cita!";
 
   return (
     <Box width="100%" display="flex" gap="200px" alignItems="center">
       <Image
         src="/logo-dalispa.png"
-        width="118px"
+        width="114px"
         height="100px"
         _hover={{ cursor: "pointer" }}
       />

@@ -6,12 +6,15 @@ const ImagesToRef = () => {
   return (
     <>
       <Box p="1em">
-        <Heading textAlign="center">IMAGENES REFERENCIALES</Heading>
+        <Heading textAlign="center" fontStyle="italic">
+          IMAGENES REFERENCIALES
+        </Heading>
         <Box
           width="100%"
           display="flex"
           mt="unset"
           padding="40px"
+          pt="10px"
           overflowX="auto"
           sx={{
             "::-webkit-scrollbar": {
@@ -24,7 +27,9 @@ const ImagesToRef = () => {
               key={index}
               alt={el.alt}
               image={el.image}
+              name={el.name}
               ml={index !== 0 ? "50px" : "unset"}
+              color={el.color}
             />
           ))}
         </Box>

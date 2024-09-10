@@ -8,17 +8,19 @@ interface Props {
   alt: string;
   ml: string;
   description?: string;
+  color: string;
 }
 
-const ReferencedImages = ({ image, name, alt, description, ml }: Props) => {
+const ReferencedImages = ({ image, name, alt, color, ml }: Props) => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   const imageStyle: CSSProperties = {
     width: "100%",
     minHeight: "300px",
+    maxHeight: "300px",
     cursor: "pointer",
     borderTopLeftRadius: "25px",
-    borderTopRightRadius: "25px",
+    borderBottomRightRadius: "25px",
     objectFit: "cover",
   };
 
@@ -32,7 +34,7 @@ const ReferencedImages = ({ image, name, alt, description, ml }: Props) => {
       flexDir="column"
       justifyContent="space-between"
       borderTopLeftRadius="25px"
-      borderTopRightRadius="25px"
+      borderBottomRightRadius="25px"
       pb="28px"
       ml={ml}
       minW="300px"
@@ -44,30 +46,18 @@ const ReferencedImages = ({ image, name, alt, description, ml }: Props) => {
     >
       <Image src={image} style={imageStyle} alt={alt}></Image>
       <Box>
-        <Box display="flex" justifyContent="flex-end">
-          <Text
-            fontSize={isHigherThan480 ? "14px" : "16px"}
-            fontStyle="italic"
-            fontWeight="bold"
-            color="#5d5d5d"
-            lineHeight="1.3"
-            p={isHigherThan480 ? "20px 0 20px 0px" : "10px 0 10px 0px"}
-            textAlign="right"
-            mt="10px"
-          >
-            {name}
-          </Text>
-        </Box>
+        <Text
+          fontSize={isHigherThan480 ? "22px" : "16px"}
+          color={color}
+          fontStyle="italic"
+          fontWeight="bold"
+          textAlign="center"
+          alignSelf="center"
+          cursor="pointer"
+        >
+          {name}
+        </Text>
       </Box>
-      <Text
-        mt="15px"
-        textAlign="right"
-        fontWeight="bold"
-        whiteSpace="nowrap"
-        fontStyle="oblique"
-      >
-        {description}
-      </Text>
     </MotionBox>
   );
 };

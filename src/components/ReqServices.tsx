@@ -6,11 +6,12 @@ interface Props {
   name: string;
   image: string;
   alt?: string;
+  color: string;
   description?: string;
   ml: string;
 }
 
-const ReqServices = ({ name, image, alt, ml }: Props) => {
+const ReqServices = ({ name, image, alt, ml, color }: Props) => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   const imageStyle: CSSProperties = {
@@ -26,15 +27,15 @@ const ReqServices = ({ name, image, alt, ml }: Props) => {
   return (
     <MotionBox
       boxShadow="0px 4px 8px rgba(0, 0, 0, 0.5)"
-      y
-      backgroundColor="white"
+      backgroundColor={color}
+      color="white"
       display="flex"
       flexDir="column"
       justifyContent="space-between"
       textAlign="center"
       borderTopLeftRadius="25px"
       borderTopRightRadius="25px"
-      pb="10px"
+      pb="20px"
       ml={ml}
       minW="300px"
       minH="380px"
@@ -58,6 +59,7 @@ const ReqServices = ({ name, image, alt, ml }: Props) => {
           alignSelf="center"
           mt="10px"
           _hover={{ cursor: "pointer" }}
+          color="white"
         >
           Haz click para saber más
         </Text>

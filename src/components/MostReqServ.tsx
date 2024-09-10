@@ -27,6 +27,7 @@ const MostReqServ = () => {
         display="flex"
         mt="unset"
         padding="40px"
+        pt="5px"
         overflowX="auto"
         sx={{
           "::-webkit-scrollbar": {
@@ -45,6 +46,7 @@ const MostReqServ = () => {
               onClick={() => handleClick(index)} // Manejador de clic para el índice específico
             >
               <ComponentToRender
+                color={el.color}
                 name={el.name}
                 alt={el.alt}
                 image={el.image}

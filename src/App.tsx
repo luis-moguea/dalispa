@@ -45,16 +45,17 @@ function App() {
               display="flex"
               justifyContent="space-between"
               alignItems="center"
-              borderBottom="solid 1px"
               padding="0.2em"
               position="fixed"
               zIndex="10000"
               backgroundColor="white"
               top="0"
+              boxShadow="0px 5px 15px rgba(0, 0, 0, 0.3)" // Sombra más intensa
             >
               <NavCallToAction />
               <Navbar />
             </Box>
+
             <MostReqServ />
             <Parallax imageUrl="/pexels-kpaukshtite-3273490.jpg" />
             <ImagesToRef />

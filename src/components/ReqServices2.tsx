@@ -7,9 +7,10 @@ interface Props {
   alt?: string;
   description: string;
   ml: string;
+  color: string;
 }
 
-const ReqServices2 = ({ name, description, ml }: Props) => {
+const ReqServices2 = ({ name, description, ml, color }: Props) => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   // Usar el componente motion.div de Framer Motion
@@ -27,9 +28,9 @@ const ReqServices2 = ({ name, description, ml }: Props) => {
       pb="28px"
       ml={ml}
       minW="300px"
-      minH="380px"
+      minH="375px"
       maxW="300px"
-      maxH="380px"
+      maxH="375px"
       whileHover={{ scale: 1.05 }} // Añadir animación de zoom al hacer hover
       transition={{ duration: 0.3 }} // Duración de la animación
       _hover={{ cursor: "pointer" }}
@@ -37,6 +38,7 @@ const ReqServices2 = ({ name, description, ml }: Props) => {
       <Box display="flex" flexDir="column">
         <Heading
           textAlign="center"
+          color={color}
           p="0"
           m="8px"
           _hover={{ cursor: "pointer" }}
@@ -47,10 +49,10 @@ const ReqServices2 = ({ name, description, ml }: Props) => {
           alignSelf="center"
           fontSize={isHigherThan480 ? "14px" : "16px"}
           fontStyle="italic"
-          fontWeight="bold"
+          fontWeight="semi-bold"
+          lineHeight="1.8"
           color="#5d5d5d"
-          lineHeight="1.3"
-          textAlign="left"
+          textAlign="center"
           mt="10px"
           p="1em"
         >
