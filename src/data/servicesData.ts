@@ -42,5 +42,12 @@ export const servicesData = [
       alt: "spa-uñas-nail-forrado-acrilico-manicure-manicura-pedicura-pedicure",
       color: "#da70d6", // Orchid
     },
+    {
+      name: "Press On",
+      description: "Con el servicio de Press-On de Dalispa, obtén uñas perfectas en minutos. Fáciles de aplicar y retirar, son ideales para cualquier ocasión, permitiéndote cambiar de estilo rápidamente mientras proteges y mantienes saludables tus uñas naturales.",
+      image: s3,
+      alt: "spa-uñas-nail-forrado-acrilico-manicure-manicura-pedicura-pedicure",
+      color: "#da7045", // Orchid
+    },
   ];
   

@@ -16,8 +16,10 @@ const Footer = () => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   const imageStyle: CSSProperties = {
-    maxWidth: isHigherThan480 ? "180px" : "120px",
-    minHeight: isHigherThan480 ? "160px" : "120px",
+    maxWidth: isHigherThan480 ? "195px" : "120px",
+    minWidth: isHigherThan480 ? "195px" : "120px",
+    minHeight: isHigherThan480 ? "170px" : "120px",
+    maxHeight: isHigherThan480 ? "170px" : "120px",
     cursor: "pointer",
   };
 
@@ -46,7 +48,7 @@ const Footer = () => {
         pt="0"
       >
         <Image
-          alt="envios-internacional-ship-shipment-baratos-estados-unidos-rapidos"
+          alt="spa-uñas-nail-semi-tradicional-manicure-manicura-pedicura-pedicure-deeppower"
           src={logo}
           style={imageStyle}
         />
@@ -58,22 +60,25 @@ const Footer = () => {
           <Box display="flex" alignItems="center">
             <Box display="flex">
               <Box display="flex" justifyContent="center" alignItems="center">
-                <Link href="https://wa.me/000" isExternal>
+                <Link href="https://wa.me/573008408237" isExternal>
                   <Icon
                     as={BsWhatsapp}
                     color="#25D366"
-                    w={10}
-                    h={8}
+                    w={30}
+                    h={30}
                     cursor="pointer"
                   ></Icon>
                 </Link>
-                <Link href="" isExternal>
+                <Link
+                  href="https://www.instagram.com/dalispa_?igsh=N3dxZG5zbmt0dTB0"
+                  isExternal
+                >
                   <Icon
                     as={CiInstagram}
                     color="#E4405F"
                     ml="5px"
-                    w={12}
-                    h={10}
+                    w={34}
+                    h={34}
                     cursor="pointer"
                   ></Icon>
                 </Link>
