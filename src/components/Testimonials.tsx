@@ -106,13 +106,15 @@ const Testimonios: React.FC = () => {
     }, 300);
   };
 
-  // Controlar el avance automático cada 18 segundos
+  // Controlar el avance automático solo si no está pausado
   useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext(); // Siempre avanzar sin depender del estado isPaused
-    }, 18000); // 18 segundos por testimonio
-    return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonte
-  }, []); // Solo ejecutarse una vez al montar
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        handleNext();
+      }, 18000); // 18 segundos por testimonio
+      return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonte
+    }
+  }, [isPaused, index]); // Dependencia de isPaused para pausar y reanudar
 
   // Pausar el ciclo automático cuando el usuario interactúa
   const pauseAutoplay = () => {
