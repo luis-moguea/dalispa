@@ -54,12 +54,11 @@ const ReqServices = ({ name, image, alt, ml, color }: Props) => {
           fontStyle="italic"
           fontWeight="bold"
           textAlign="center"
-          color="black"
+          color="white"
           lineHeight="1.3"
           alignSelf="center"
           mt="10px"
           _hover={{ cursor: "pointer" }}
-          color="white"
         >
           Haz click para saber más
         </Text>
