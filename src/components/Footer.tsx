@@ -28,7 +28,7 @@ const Footer = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      bgColor="white"
+      bgColor="#19191a"
       minH={isHigherThan480 ? "300px" : "250px"}
       flexDir="column"
       width="100%"
@@ -88,7 +88,7 @@ const Footer = () => {
           <Text
             fontStyle="italic"
             fontSize="12px"
-            color="#000000"
+            color="#ffffff"
             textAlign="left"
           >
             ¡Placer y belleza para tus manos y pies!
@@ -101,7 +101,7 @@ const Footer = () => {
             boxShadow: "0 0 1px rgba(0, 0, 0, 0.2)",
           }}
         />
-        <Text mt="20px" fontSize="12px" color="#000000" textAlign="center">
+        <Text mt="20px" fontSize="12px" color="#ffffff" textAlign="center">
           DaliSpa | Todos los derechos reservados &reg;
         </Text>
       </Box>

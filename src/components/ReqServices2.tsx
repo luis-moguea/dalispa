@@ -7,10 +7,10 @@ interface Props {
   alt?: string;
   description: string;
   ml: string;
-  color: string;
+  color?: string;
 }
 
-const ReqServices2 = ({ name, description, ml, color }: Props) => {
+const ReqServices2 = ({ name, description, ml }: Props) => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   // Usar el componente motion.div de Framer Motion
@@ -38,7 +38,7 @@ const ReqServices2 = ({ name, description, ml, color }: Props) => {
       <Box display="flex" flexDir="column">
         <Heading
           textAlign="center"
-          color={color}
+          color="#373739"
           p="0"
           m="8px"
           _hover={{ cursor: "pointer" }}

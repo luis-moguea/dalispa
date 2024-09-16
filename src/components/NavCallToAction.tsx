@@ -73,6 +73,7 @@ const NavCallToAction = () => {
             <MotionText
               key={index}
               fontSize="20px"
+              color="#ffffff"
               _hover={{ cursor: "pointer", color: "gray" }}
               custom={index}
               variants={typingAnimation}

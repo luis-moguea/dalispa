@@ -48,7 +48,7 @@ function App() {
               padding="0.2em"
               position="fixed"
               zIndex="10000"
-              backgroundColor="white"
+              backgroundColor="#19191a"
               top="0"
               boxShadow="0px 5px 15px rgba(0, 0, 0, 0.3)" // Sombra más intensa
             >

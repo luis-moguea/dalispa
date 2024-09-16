@@ -8,8 +8,16 @@ const Navbar = () => {
   return (
     <Box display="flex" gap="15px" pr="3em">
       {navbarKeys.map((el, index) => (
-        <Link to={navbarLinks[index]} key={index}>
-          <Text fontSize="20px" _hover={{ cursor: "pointer", color: "gray" }}>
+        <Link
+          to={navbarLinks[index]}
+          key={index}
+          style={{ textDecoration: "none" }}
+        >
+          <Text
+            color="#ffffff"
+            fontSize="20px"
+            _hover={{ cursor: "pointer", color: "gray" }}
+          >
             {el}
           </Text>
         </Link>

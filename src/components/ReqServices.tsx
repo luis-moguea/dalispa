@@ -6,12 +6,12 @@ interface Props {
   name: string;
   image: string;
   alt?: string;
-  color: string;
+  color?: string;
   description?: string;
   ml: string;
 }
 
-const ReqServices = ({ name, image, alt, ml, color }: Props) => {
+const ReqServices = ({ name, image, alt, ml }: Props) => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   const imageStyle: CSSProperties = {
@@ -27,7 +27,7 @@ const ReqServices = ({ name, image, alt, ml, color }: Props) => {
   return (
     <MotionBox
       boxShadow="0px 4px 8px rgba(0, 0, 0, 0.5)"
-      backgroundColor={color}
+      backgroundColor="#373739"
       color="white"
       display="flex"
       flexDir="column"

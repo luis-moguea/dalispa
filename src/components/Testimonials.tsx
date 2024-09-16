@@ -125,7 +125,7 @@ const Testimonios: React.FC = () => {
   };
 
   return (
-    <Box textAlign="center" p="3.5em" bgColor="#c4a786">
+    <Box textAlign="center" p="3.5em">
       <Heading mt="0" as="h1" mb={5} fontStyle="italic">
         Lo que dicen nuestros clientes...
       </Heading>
@@ -163,7 +163,7 @@ const Testimonios: React.FC = () => {
               <Text mb="-10px" fontWeight="bold">
                 {testimonios[index].nombre}
               </Text>
-              <Text mb="0" fontSize="15px" color="red">
+              <Text mb="0" fontSize="15px" color="brown" textStyle="italic">
                 {testimonios[index].servicio}
               </Text>
             </Box>

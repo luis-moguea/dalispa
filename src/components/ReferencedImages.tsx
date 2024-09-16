@@ -8,10 +8,10 @@ interface Props {
   alt: string;
   ml: string;
   description?: string;
-  color: string;
+  color?: string;
 }
 
-const ReferencedImages = ({ image, name, alt, color, ml }: Props) => {
+const ReferencedImages = ({ image, name, alt, ml }: Props) => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   const imageStyle: CSSProperties = {
@@ -32,15 +32,16 @@ const ReferencedImages = ({ image, name, alt, color, ml }: Props) => {
       boxShadow="0px 4px 8px rgba(77, 20, 140, 0.5)"
       display="flex"
       flexDir="column"
+      bgColor="#373739"
       justifyContent="space-between"
       borderTopLeftRadius="25px"
       borderBottomRightRadius="25px"
       pb="28px"
       ml={ml}
       minW="300px"
-      minH="400px"
+      minH="360px"
       maxW="300px"
-      maxH="400px"
+      maxH="360px"
       whileHover={{ scale: 1.05 }} // Añadir animación de zoom al hacer hover
       transition={{ duration: 0.3 }} // Duración de la animación
     >
@@ -48,12 +49,15 @@ const ReferencedImages = ({ image, name, alt, color, ml }: Props) => {
       <Box>
         <Text
           fontSize={isHigherThan480 ? "22px" : "16px"}
-          color={color}
+          color="#ffffff"
           fontStyle="italic"
           fontWeight="bold"
           textAlign="center"
           alignSelf="center"
           cursor="pointer"
+          mb="0"
+          mt="0"
+          pt="0"
         >
           {name}
         </Text>
