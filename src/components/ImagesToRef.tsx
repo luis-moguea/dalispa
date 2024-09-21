@@ -1,6 +1,6 @@
 import { Box, Heading, useMediaQuery } from "@chakra-ui/react";
-import { servicesData } from "../data/servicesData";
 import ReferencedImages from "./ReferencedImages";
+import { shadowData } from "../data/shadowData";
 
 const ImagesToRef = () => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
@@ -29,7 +29,7 @@ const ImagesToRef = () => {
             },
           }}
         >
-          {servicesData.map((el, index) => (
+          {shadowData.map((el, index) => (
             <ReferencedImages
               key={index}
               alt={el.alt}
