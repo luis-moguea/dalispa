@@ -7,7 +7,7 @@ const ImagesToRef = () => {
     <>
       <Box p="1em">
         <Heading textAlign="center" fontStyle="italic">
-          IMAGENES REFERENCIALES
+          GALERIA DE IMAGENES
         </Heading>
         <Box
           width="100%"
@@ -30,6 +30,7 @@ const ImagesToRef = () => {
               name={el.name}
               ml={index !== 0 ? "50px" : "unset"}
               color={el.color}
+              link={el.link}
             />
           ))}
         </Box>

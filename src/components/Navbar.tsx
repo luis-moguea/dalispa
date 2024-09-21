@@ -13,13 +13,16 @@ const Navbar = () => {
           key={index}
           style={{ textDecoration: "none" }}
         >
-          <Text
-            color="#ffffff"
-            fontSize="20px"
-            _hover={{ cursor: "pointer", color: "gray" }}
-          >
-            {el}
-          </Text>
+          <Box bgColor="#c9b977" borderRadius="8px">
+            <Text
+              p="0.3em"
+              color="#19191a"
+              fontSize="20px"
+              _hover={{ cursor: "pointer", color: "#ffffff" }}
+            >
+              {el}
+            </Text>
+          </Box>
         </Link>
       ))}
     </Box>

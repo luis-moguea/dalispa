@@ -1,7 +1,8 @@
 // src/components/NavCallToAction.tsx
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Text, Link } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
 
 // Crear un componente Text animado
 const MotionText = motion(Text);
@@ -46,19 +47,24 @@ const NavCallToAction = () => {
 
   return (
     <Box width="100%" display="flex" gap="200px" alignItems="center">
-      <Image
-        src="/logo-dalispa.png"
-        width="114px"
-        height="100px"
-        _hover={{ cursor: "pointer" }}
-      />
-      <Box display="flex" alignItems="center" gap="15px">
+      <RouterLink to="/">
         <Image
-          src="/waIcon.png"
-          width="50px"
-          height="50px"
+          src="/logo-dalispa.png"
+          width="114px"
+          height="100px"
           _hover={{ cursor: "pointer" }}
         />
+      </RouterLink>
+
+      <Box display="flex" alignItems="center" gap="15px">
+        <Link href="https://wa.me/573008408237" isExternal>
+          <Image
+            src="/waIcon.png"
+            width="50px"
+            height="50px"
+            _hover={{ cursor: "pointer" }}
+          />
+        </Link>
         <MotionBox
           key={animationKey} // Cambia la clave para reiniciar la animación
           display="flex"

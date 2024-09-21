@@ -60,7 +60,7 @@ const ReqServices = ({ name, image, alt, ml }: Props) => {
           mt="10px"
           _hover={{ cursor: "pointer" }}
         >
-          Haz click para saber más
+          Toca aquí para saber más
         </Text>
       </Box>
     </MotionBox>

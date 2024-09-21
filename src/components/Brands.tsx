@@ -8,7 +8,10 @@ import { brandsData } from "../data/brandsData";
 
 const Brands: React.FC = () => {
   return (
-    <Box>
+    <Box minHeight="100vh" width="100%" bg="#c9b977">
+      {" "}
+      {/* Asegura que ocupe toda la pantalla */}
+      {/* Navbar fija */}
       <Box
         width="100%"
         display="flex"
@@ -17,40 +20,43 @@ const Brands: React.FC = () => {
         padding="0.2em"
         position="fixed"
         zIndex="10000"
-        backgroundColor="white"
+        backgroundColor="#19191a"
         top="0"
         boxShadow="0px 5px 15px rgba(0, 0, 0, 0.3)" // Sombra más intensa
       >
         <NavCallToAction />
         <Navbar />
       </Box>
-
+      {/* Contenido principal */}
       <Box
-        mt="115px"
+        mt="90px" // Asegura que el contenido no quede oculto bajo el navbar
+        width="100%"
         display="flex"
         flexDir="column"
         justifyContent="center"
-        textAlign="center"
         alignItems="center"
+        textAlign="center"
       >
-        <Heading fontStyle="italic" textAlign="center">
+        <Heading fontStyle="italic" fontSize="40px" mb="1em">
           Nuestras Marcas
-        </Heading>{" "}
-        {/* Asegúrate de que el contenido no quede oculto bajo la navbar */}
+        </Heading>
+
         {brandsData.map((el, index) => (
-          <Box key={index}>
+          <Box key={index} width="100%" maxW="1200px" mb="2em">
+            {" "}
+            {/* Centrado y con un maxWidth */}
             {index % 2 === 0 ? (
               <Bcomp1
                 name={el.name}
                 description={el.description}
                 image={el.image}
-              /> // Pasa el objeto de la marca como prop
+              />
             ) : (
               <Bcomp2
                 name={el.name}
                 description={el.description}
                 image={el.image}
-              /> // Pasa el objeto de la marca como prop
+              />
             )}
           </Box>
         ))}

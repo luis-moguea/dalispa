@@ -9,11 +9,31 @@ interface Brands {
 
 const Bcomp1 = ({ name, image, description }: Brands) => {
   return (
-    <Box display="flex">
-      <Image src={image} width="50px" />
-      <Box>
-        <Heading>{name}</Heading>
-        <Text fontStyle="italic">{description}</Text>
+    <Box
+      gap="40px"
+      w="100%"
+      display="flex"
+      alignItems="center"
+      borderBottom="solid 1px #ecdda2"
+      pb="0.8em"
+    >
+      <Image
+        borderRadius="15px"
+        minH="200px"
+        minW="150px"
+        maxH="200px"
+        maxW="150px"
+        src={image}
+        width="50px"
+        objectFit="contain"
+      />
+      <Box w="100%">
+        <Heading fontStyle="italic" fontSize="30px">
+          {name}
+        </Heading>
+        <Text textAlign="right" fontStyle="italic">
+          {description}
+        </Text>
       </Box>
     </Box>
   );

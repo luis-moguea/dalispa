@@ -1,6 +1,7 @@
 import { Box, useMediaQuery, Text, Image } from "@chakra-ui/react";
 import { CSSProperties } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface Props {
   name?: string;
@@ -9,9 +10,10 @@ interface Props {
   ml: string;
   description?: string;
   color?: string;
+  link?: string;
 }
 
-const ReferencedImages = ({ image, name, alt, ml }: Props) => {
+const ReferencedImages = ({ image, name, alt, ml, link }: Props) => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   const imageStyle: CSSProperties = {
@@ -45,23 +47,30 @@ const ReferencedImages = ({ image, name, alt, ml }: Props) => {
       whileHover={{ scale: 1.05 }} // Añadir animación de zoom al hacer hover
       transition={{ duration: 0.3 }} // Duración de la animación
     >
-      <Image src={image} style={imageStyle} alt={alt}></Image>
-      <Box>
-        <Text
-          fontSize={isHigherThan480 ? "22px" : "16px"}
-          color="#ffffff"
-          fontStyle="italic"
-          fontWeight="bold"
-          textAlign="center"
-          alignSelf="center"
-          cursor="pointer"
-          mb="0"
-          mt="0"
-          pt="0"
-        >
-          {name}
-        </Text>
-      </Box>
+      <Link
+        to={link || "/"}
+        style={{
+          textDecoration: "none",
+        }}
+      >
+        <Image src={image} style={imageStyle} alt={alt}></Image>
+        <Box>
+          <Text
+            fontSize={isHigherThan480 ? "22px" : "16px"}
+            color="#ffffff"
+            fontStyle="italic"
+            fontWeight="bold"
+            textAlign="center"
+            alignSelf="center"
+            cursor="pointer"
+            mb="0"
+            mt="15px"
+            pt="0"
+          >
+            {name}
+          </Text>
+        </Box>
+      </Link>
     </MotionBox>
   );
 };

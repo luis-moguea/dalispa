@@ -1,5 +1,5 @@
 import { useEffect, useState, Suspense, lazy } from "react";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Link } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 // Carga diferida de componentes
@@ -57,22 +57,24 @@ function App() {
             </Box>
 
             <MostReqServ />
-            <Parallax imageUrl="/pexels-kpaukshtite-3273490.jpg" />
+            <Parallax imageUrl="/acri1.jpg" />
             <ImagesToRef />
             <Testimonials />
 
             <Footer />
-            <Image
-              alt="spa-de-uñas-pies"
-              src="/waIcon.png"
-              position="fixed" // Usa sticky aquí
-              bottom="5%"
-              left="90%"
-              width="60px"
-              height="60px"
-              zIndex="99999" // Asegúrate de que el zIndex sea alto
-              cursor="pointer"
-            />
+            <Link href="https://wa.me/573008408237" isExternal>
+              <Image
+                alt="spa-de-uñas-pies"
+                src="/waIcon.png"
+                position="fixed" // Usa sticky aquí
+                bottom="5%"
+                left="90%"
+                width="60px"
+                height="60px"
+                zIndex="99999" // Asegúrate de que el zIndex sea alto
+                cursor="pointer"
+              />
+            </Link>
           </MotionBox>
         </Box>
       )}
