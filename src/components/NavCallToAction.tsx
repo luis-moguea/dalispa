@@ -1,5 +1,5 @@
 // src/components/NavCallToAction.tsx
-import { Box, Image, Text, Link } from "@chakra-ui/react";
+import { Box, Image, Text, Link, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
@@ -34,6 +34,7 @@ const containerAnimation = {
 
 const NavCallToAction = () => {
   const [animationKey, setAnimationKey] = useState(0); // Estado para forzar la reinicialización de la animación
+  const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -46,12 +47,17 @@ const NavCallToAction = () => {
   const text = "Quiero Mi Cita!";
 
   return (
-    <Box width="100%" display="flex" gap="200px" alignItems="center">
+    <Box
+      width="100%"
+      display="flex"
+      gap={isHigherThan480 ? "200px" : "unset"}
+      alignItems="center"
+    >
       <RouterLink to="/">
         <Image
           src="/logo-dalispa.png"
-          width="114px"
-          height="100px"
+          width={isHigherThan480 ? "114px" : "100px"}
+          height={isHigherThan480 ? "100px" : "90px"}
           _hover={{ cursor: "pointer" }}
         />
       </RouterLink>

@@ -9,6 +9,7 @@ interface ParallaxProps {
 const Parallax: React.FC<ParallaxProps> = ({ imageUrl, height = "200px" }) => {
   return (
     <Box
+      width="100%"
       pt="1em"
       pb="1em"
       height={height}

@@ -1,4 +1,4 @@
-import { Box, Image, Text, Heading } from "@chakra-ui/react";
+import { Box, Image, Text, Heading, useMediaQuery } from "@chakra-ui/react";
 
 interface Brands {
   name: string;
@@ -8,13 +8,16 @@ interface Brands {
 }
 
 const Bcomp1 = ({ name, image, description }: Brands) => {
+  const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
+
   return (
     <Box
       gap="40px"
-      w="100%"
+      maxW="100%"
       display="flex"
       alignItems="center"
       borderBottom="solid 1px #ecdda2"
+      p={isHigherThan480 ? "unset" : "2em"}
       pb="0.8em"
     >
       <Image

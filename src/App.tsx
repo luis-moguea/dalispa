@@ -1,5 +1,5 @@
 import { useEffect, useState, Suspense, lazy } from "react";
-import { Box, Image, Link } from "@chakra-ui/react";
+import { Box, Image, Link, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 // Carga diferida de componentes
@@ -18,6 +18,7 @@ const MotionBox = motion(Box);
 function App() {
   const [showCenteredText, setShowCenteredText] = useState(true);
   const [showContent, setShowContent] = useState(false);
+  const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -42,10 +43,11 @@ function App() {
           >
             <Box
               width="100%"
+              maxW="100%"
               display="flex"
-              justifyContent="space-between"
+              justifyContent={isHigherThan480 ? "space-between" : "unset"}
               alignItems="center"
-              padding="0.2em"
+              padding={isHigherThan480 ? "0.2em" : "unset"}
               position="fixed"
               zIndex="10000"
               backgroundColor="#19191a"
@@ -57,7 +59,10 @@ function App() {
             </Box>
 
             <MostReqServ />
-            <Parallax imageUrl="/acri1.jpg" />
+            <Parallax
+              imageUrl="/acri1.jpg"
+              height={isHigherThan480 ? "unset" : "350px"}
+            />
             <ImagesToRef />
             <Testimonials />
 
@@ -68,9 +73,9 @@ function App() {
                 src="/waIcon.png"
                 position="fixed" // Usa sticky aquí
                 bottom="5%"
-                left="90%"
-                width="60px"
-                height="60px"
+                left={isHigherThan480 ? "90%" : "75%"}
+                width={isHigherThan480 ? "60px" : "80px"}
+                height={isHigherThan480 ? "60px" : "80px"}
                 zIndex="99999" // Asegúrate de que el zIndex sea alto
                 cursor="pointer"
               />

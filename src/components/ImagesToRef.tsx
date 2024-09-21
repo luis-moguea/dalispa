@@ -1,11 +1,17 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, useMediaQuery } from "@chakra-ui/react";
 import { servicesData } from "../data/servicesData";
 import ReferencedImages from "./ReferencedImages";
 
 const ImagesToRef = () => {
+  const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
+
   return (
     <>
-      <Box p="1em">
+      <Box
+        p={isHigherThan480 ? "1em" : "unset"}
+        maxW="100%"
+        pl={isHigherThan480 ? "unset" : "0.4em"}
+      >
         <Heading textAlign="center" fontStyle="italic">
           GALERIA DE IMAGENES
         </Heading>
@@ -13,8 +19,9 @@ const ImagesToRef = () => {
           width="100%"
           display="flex"
           mt="unset"
-          padding="40px"
+          padding={isHigherThan480 ? "40px" : "unset"}
           pt="10px"
+          pb={isHigherThan480 ? "unset" : "40px"}
           overflowX="auto"
           sx={{
             "::-webkit-scrollbar": {

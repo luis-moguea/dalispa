@@ -1,5 +1,5 @@
 import { useState } from "react"; // Importa useState
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, useMediaQuery } from "@chakra-ui/react";
 import { servicesData } from "../data/servicesData";
 import ReqServices from "./ReqServices";
 import ReqServices2 from "./ReqServices2";
@@ -10,6 +10,8 @@ const MostReqServ = () => {
     Array(servicesData.length).fill(true) // Inicializa todos los elementos con true (ReqServices)
   );
 
+  const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
+
   // Manejador de clic para alternar el componente en un índice específico
   const handleClick = (index: number) => {
     setActiveComponents(
@@ -18,7 +20,11 @@ const MostReqServ = () => {
   };
 
   return (
-    <Box pt="113px">
+    <Box
+      mt={isHigherThan480 ? "125px" : "115px"}
+      maxW="100%"
+      pl={isHigherThan480 ? "unset" : "0.4em"}
+    >
       <Heading fontStyle="italic" textAlign="center">
         TODOS NUESTROS SERVICIOS
       </Heading>
@@ -26,7 +32,8 @@ const MostReqServ = () => {
         width="100%"
         display="flex"
         mt="unset"
-        padding="40px"
+        padding={isHigherThan480 ? "40px" : "unset"}
+        mb={isHigherThan480 ? "unset" : "40px"}
         pt="5px"
         overflowX="auto"
         sx={{

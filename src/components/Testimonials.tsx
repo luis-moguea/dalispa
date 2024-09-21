@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Box, Heading, Image, Text, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Image,
+  Text,
+  Flex,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 
@@ -83,6 +90,7 @@ const Testimonios: React.FC = () => {
   const [index, setIndex] = useState(0); // Índice actual del testimonio
   const [isVisible, setIsVisible] = useState(true); // Controla la visibilidad para las animaciones
   const [isPaused, setIsPaused] = useState(false); // Para controlar cuando el usuario interactúa
+  const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   // Función para avanzar al siguiente testimonio
   const handleNext = () => {
@@ -125,7 +133,13 @@ const Testimonios: React.FC = () => {
   };
 
   return (
-    <Box textAlign="center" p="3.5em">
+    <Box
+      maxH={isHigherThan480 ? "unset" : "350px"}
+      h={isHigherThan480 ? "unset" : "280px"}
+      textAlign="center"
+      p={isHigherThan480 ? "3.5em" : "2em"}
+      maxW="100%"
+    >
       <Heading mt="0" as="h1" mb={5} fontStyle="italic">
         Lo que dicen nuestros clientes...
       </Heading>

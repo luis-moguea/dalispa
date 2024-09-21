@@ -16,7 +16,7 @@ export const brandsData = [
         description: "Masglo es una marca multinacional de esmaltes conocida por su alta calidad y amplia reputación en el mercado. Es una marca en la que tanto las manicuristas como los consumidores confían y recomiendan. Además de su compromiso con ofrecer productos de excelente desempeño, Masglo se destaca por su preocupación por causas sociales y femeninas, lo que refuerza su presencia y prestigio en la industria del cuidado de uñas."
     },
     {
-        name: "Rokini",
+        name: "Roniki",
         image: roki,
         description: "RONIKI es una marca con más de 12 años de experiencia en la producción de productos profesionales para manicura, reconocida por su enfoque en cumplir los más altos estándares de calidad y seguridad en la industria cosmética a nivel mundial. Fabricada en China, RONIKI se comercializa en diversos países, incluyendo la Unión Europea (especialmente en Rusia), Estados Unidos, México, y otros. En Chile, la marca cuenta con representación oficial y está inscrita en el Instituto de Salud Pública (ISP) para garantizar la seguridad de sus consumidores."
     },

@@ -1,5 +1,12 @@
 import React, { Suspense, lazy } from "react";
-import { Box, Grid, GridItem, Image, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  Grid,
+  GridItem,
+  Image,
+  Heading,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { acriData } from "../data/imagesData";
 
 // Carga diferida de los componentes Navbar y NavCallToAction
@@ -7,6 +14,8 @@ const Navbar = lazy(() => import("./Navbar"));
 const NavCallToAction = lazy(() => import("./NavCallToAction"));
 
 const Acrilicas: React.FC = () => {
+  const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
+
   const renderImages = (images: string[]) => {
     return images.map((image, index) => {
       const isFirstTwo = index < 2;
@@ -53,16 +62,16 @@ const Acrilicas: React.FC = () => {
       <Suspense fallback={null}>
         <Box
           width="100%"
+          maxW="100%"
           display="flex"
-          justifyContent="space-between"
+          justifyContent={isHigherThan480 ? "space-between" : "unset"}
           alignItems="center"
-          padding="1em"
-          height="4em"
+          padding={isHigherThan480 ? "0.2em" : "unset"}
           position="fixed"
           zIndex="10000"
           backgroundColor="#19191a"
           top="0"
-          boxShadow="0px 5px 15px rgba(0, 0, 0, 0.3)"
+          boxShadow="0px 5px 15px rgba(0, 0, 0, 0.3)" // Sombra más intensa
         >
           <NavCallToAction />
           <Navbar />

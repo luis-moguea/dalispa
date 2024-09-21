@@ -16,10 +16,10 @@ const Footer = () => {
   const [isHigherThan480] = useMediaQuery("(min-width: 480px)");
 
   const imageStyle: CSSProperties = {
-    maxWidth: isHigherThan480 ? "195px" : "120px",
-    minWidth: isHigherThan480 ? "195px" : "120px",
-    minHeight: isHigherThan480 ? "170px" : "120px",
-    maxHeight: isHigherThan480 ? "170px" : "120px",
+    maxWidth: isHigherThan480 ? "195px" : "180px",
+    minWidth: isHigherThan480 ? "195px" : "180px",
+    minHeight: isHigherThan480 ? "170px" : "160px",
+    maxHeight: isHigherThan480 ? "170px" : "160px",
     cursor: "pointer",
   };
 
@@ -29,11 +29,12 @@ const Footer = () => {
       alignItems="center"
       justifyContent="center"
       bgColor="#19191a"
-      minH={isHigherThan480 ? "300px" : "250px"}
+      minH={isHigherThan480 ? "300px" : "280px"}
       flexDir="column"
       width="100%"
-      mt="40px"
-      p={isHigherThan480 ? "unset" : "40px"}
+      maxW="100%"
+      mt={isHigherThan480 ? "40px" : "unset"}
+      p="unset"
       bottom="0"
       position="relative" // Asegúrate de que el contenedor del footer tenga position: relative
       zIndex="1"
@@ -43,7 +44,7 @@ const Footer = () => {
         flexDir={isHigherThan480 ? "unset" : "unset"}
         justifyContent={isHigherThan480 ? "unset" : "center"}
         alignItems={isHigherThan480 ? "unset" : "center"}
-        padding="40px"
+        padding={isHigherThan480 ? "40px" : "unset"}
         pb="0"
         pt="0"
       >
@@ -55,17 +56,23 @@ const Footer = () => {
         <Box
           display="flex"
           flexDir="column"
-          padding={isHigherThan480 ? "50px" : "20px"}
+          padding={isHigherThan480 ? "50px" : "unset"}
         >
           <Box display="flex" alignItems="center">
             <Box display="flex">
-              <Box display="flex" justifyContent="center" alignItems="center">
+              <Box
+                mt={isHigherThan480 ? "unset" : "40px"}
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
                 <Link href="https://wa.me/573008408237" isExternal>
                   <Icon
                     as={BsWhatsapp}
                     color="#25D366"
-                    w={30}
-                    h={30}
+                    w={isHigherThan480 ? 30 : 46}
+                    h={isHigherThan480 ? 30 : 46}
+                    ml={isHigherThan480 ? "unset" : "30px"}
                     cursor="pointer"
                   ></Icon>
                 </Link>
@@ -76,9 +83,9 @@ const Footer = () => {
                   <Icon
                     as={CiInstagram}
                     color="#E4405F"
-                    ml="5px"
-                    w={34}
-                    h={34}
+                    ml={isHigherThan480 ? "5px" : "10px"}
+                    w={isHigherThan480 ? 34 : 54}
+                    h={isHigherThan480 ? 34 : 54}
                     cursor="pointer"
                   ></Icon>
                 </Link>
@@ -87,9 +94,10 @@ const Footer = () => {
           </Box>
           <Text
             fontStyle="italic"
-            fontSize="12px"
+            fontSize={isHigherThan480 ? "12px" : "14px"}
             color="#ffffff"
-            textAlign="left"
+            textAlign={isHigherThan480 ? "left" : "center"}
+            mr={isHigherThan480 ? "unset" : "10px"}
           >
             ¡Placer y belleza para tus manos y pies!
           </Text>
