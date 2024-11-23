@@ -59,9 +59,9 @@ const Navbar = () => {
             >
               {/* Elementos del menú */}
               {navbarKeys.map((el, index) => (
-                <MenuItem key={index} borderRadius="10px" bg="#44403f">
+                <MenuItem key={index} borderRadius="10px" bg="#44403f" mb="4px">
                   <Link
-                    style={{ textDecoration: "none" }}
+                    style={{ textDecoration: "none", alignItems: "center" }}
                     to={navbarLinks[index]}
                   >
                     <Text textAlign="center" color="#ffffff">
