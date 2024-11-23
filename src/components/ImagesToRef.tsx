@@ -13,7 +13,7 @@ const ImagesToRef = () => {
         pl={isHigherThan480 ? "unset" : "0.4em"}
       >
         <Heading textAlign="center" fontStyle="italic">
-          GALERIA DE IMAGENES
+          Galería de Imágenes
         </Heading>
         <Box
           width="100%"

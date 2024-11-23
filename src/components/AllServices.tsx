@@ -15,7 +15,7 @@ interface AllServicesProps {
 const AllServices: React.FC<AllServicesProps> = ({ services }) => {
   return (
     <Box p="1em" textAlign="center">
-      <Heading marginBottom={6}>TODOS NUESTROS SERVICIOS</Heading>
+      <Heading marginBottom={6}>Nuestros Servicios</Heading>
       <Grid
         p="1em"
         templateColumns={["1fr", "repeat(2, 1fr)"]} // Una columna en dispositivos pequeños, tres en dispositivos más grandes

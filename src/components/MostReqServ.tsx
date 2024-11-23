@@ -26,7 +26,7 @@ const MostReqServ = () => {
       pl={isHigherThan480 ? "unset" : "0.4em"}
     >
       <Heading fontStyle="italic" textAlign="center">
-        TODOS NUESTROS SERVICIOS
+        Nuestros Servicios
       </Heading>
       <Box
         width="100%"
