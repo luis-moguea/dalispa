@@ -7,7 +7,7 @@ const Navbar = lazy(() => import("./components/Navbar"));
 const NavCallToAction = lazy(() => import("./components/NavCallToAction"));
 const MostReqServ = lazy(() => import("./components/MostReqServ"));
 const ImagesToRef = lazy(() => import("./components/ImagesToRef"));
-const Parallax = lazy(() => import("./components/Parallax"));
+const CustomParallax = lazy(() => import("./components/Parallax"));
 const CenteredText = lazy(() => import("./components/CenteredText"));
 const Testimonials = lazy(() => import("./components/Testimonials"));
 const Footer = lazy(() => import("./components/Footer"));
@@ -60,8 +60,8 @@ function App() {
             </Box>
 
             <MostReqServ />
-            <Parallax
-              imageUrl="/acri1.jpg"
+            <CustomParallax
+              image="/acri1.jpg"
               height={isHigherThan480 ? "unset" : "350px"}
             />
             <ImagesToRef />

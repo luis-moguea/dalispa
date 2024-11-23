@@ -1,37 +1,51 @@
 import React from "react";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import { Box, Text } from "@chakra-ui/react";
 
-interface ParallaxProps {
-  imageUrl: string; // URL de la imagen que se usará en el parallax
-  height?: string; // Altura opcional para el contenedor de parallax
+interface CustomParallaxProps {
+  image: string;
+  height: string; // Altura personalizada
 }
 
-const Parallax: React.FC<ParallaxProps> = ({ imageUrl, height = "200px" }) => {
+const CustomParallax: React.FC<CustomParallaxProps> = ({ image, height }) => {
   return (
-    <Box
-      width="100%"
-      pt="1em"
-      pb="1em"
-      height={height}
-      backgroundImage={`url(${imageUrl})`}
-      backgroundAttachment="fixed" // Fija la imagen para el efecto parallax
-      backgroundPosition="center"
-      backgroundRepeat="no-repeat"
-      backgroundSize="cover"
-      display="flex" // Usa flexbox para centrar el contenido
-      alignItems="center" // Alinea verticalmente
-      justifyContent="center" // Alinea horizontalmente
-    >
-      <Text
-        fontSize="40px"
-        fontStyle="italic"
-        color="white"
-        textShadow="1px 1px 2px black"
-      >
-        ¡Pide tu cita ahora!
-      </Text>
-    </Box>
+    <ParallaxProvider>
+      <Box position="relative" height={height} width="100%" overflow="hidden">
+        {/* Efecto parallax con la imagen */}
+        <Parallax translateY={[-60, 60]} style={{ height: "100%" }}>
+          <Box
+            position="absolute"
+            top="0"
+            left="0"
+            width="100%"
+            height="100%"
+            bgImage={`url(${image})`}
+            bgPosition="center"
+            bgSize="cover"
+            zIndex={-1}
+          />
+        </Parallax>
+
+        {/* Texto centrado */}
+        <Box
+          position="absolute"
+          top="50%"
+          left="50%"
+          transform="translate(-50%, -50%)"
+          textAlign="center"
+        >
+          <Text
+            fontSize="4xl"
+            fontWeight="bold"
+            color="white"
+            textShadow="0 2px 5px rgba(0, 0, 0, 0.7)"
+          >
+            ¡Pidetu cita ahora!
+          </Text>
+        </Box>
+      </Box>
+    </ParallaxProvider>
   );
 };
 
-export default Parallax;
+export default CustomParallax;

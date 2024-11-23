@@ -54,9 +54,9 @@ const Semipermanente: React.FC = () => {
       </Suspense>
 
       {/* Contenido principal con margen superior para no superponerse al Navbar */}
-      <Box p="2em" mx="auto" px="4" mt="6em">
+      <Box p="1.2em" mx="auto" px="4" mt="6em">
         <Heading textAlign="center" mb="1em">
-          TRADICIONAL
+          SEMIPERMANENTES
         </Heading>
         <VStack spacing={5} align="stretch" p="2em">
           {renderImages(semiData)}
