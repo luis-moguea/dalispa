@@ -53,7 +53,9 @@ const Navbar = () => {
             />
             <MenuList
               borderRadius="10px"
+              w="110px"
               boxShadow="0 4px 12px rgba(0, 0, 0, 0.15)"
+              gap="10px"
               p="0.7em"
             >
               {/* Elementos del menú */}
@@ -63,7 +65,9 @@ const Navbar = () => {
                     style={{ textDecoration: "none" }}
                     to={navbarLinks[index]}
                   >
-                    <Text color="#020202">{el}</Text>
+                    <Text textAlign="center" color="#020202">
+                      {el}
+                    </Text>
                   </Link>
                 </MenuItem>
               ))}
