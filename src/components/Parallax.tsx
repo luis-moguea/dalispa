@@ -35,12 +35,12 @@ const CustomParallax: React.FC<CustomParallaxProps> = ({ image, height }) => {
           textAlign="center"
         >
           <Text
-            fontSize="4xl"
-            fontWeight="bold"
+            fontSize="22px"
+            fontStyle="italic"
             color="white"
             textShadow="0 2px 5px rgba(0, 0, 0, 0.7)"
           >
-            ¡Pidetu cita ahora!
+            ¡Pide tu cita ahora!
           </Text>
         </Box>
       </Box>
