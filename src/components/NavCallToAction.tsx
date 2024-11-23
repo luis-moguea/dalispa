@@ -44,7 +44,7 @@ const NavCallToAction = () => {
     return () => clearInterval(interval); // Limpiar el intervalo al desmontar
   }, []);
 
-  const text = "Quiero Mi Cita!";
+  const text = "Agendar Cita!";
 
   return (
     <Box
@@ -56,18 +56,23 @@ const NavCallToAction = () => {
       <RouterLink to="/">
         <Image
           src="/logo-dalispa.png"
-          width={isHigherThan480 ? "114px" : "100px"}
-          height={isHigherThan480 ? "100px" : "90px"}
+          width={isHigherThan480 ? "95px" : "88px"}
+          height={isHigherThan480 ? "85px" : "79px"}
           _hover={{ cursor: "pointer" }}
         />
       </RouterLink>
 
-      <Box display="flex" alignItems="center" gap="15px">
+      <Box
+        display="flex"
+        ml={isHigherThan480 ? "unset" : "18px"}
+        alignItems="center"
+        gap="15px"
+      >
         <Link href="https://wa.me/573008408237" isExternal>
           <Image
             src="/waIcon.png"
-            width="50px"
-            height="50px"
+            width={isHigherThan480 ? "50px" : "35px"}
+            height={isHigherThan480 ? "50px" : "35px"}
             _hover={{ cursor: "pointer" }}
           />
         </Link>

@@ -11,6 +11,7 @@ const Parallax = lazy(() => import("./components/Parallax"));
 const CenteredText = lazy(() => import("./components/CenteredText"));
 const Testimonials = lazy(() => import("./components/Testimonials"));
 const Footer = lazy(() => import("./components/Footer"));
+const MapLocal = lazy(() => import("./components/MapLocal"));
 
 // Crear un componente Box animado
 const MotionBox = motion(Box);
@@ -64,6 +65,7 @@ function App() {
               height={isHigherThan480 ? "unset" : "350px"}
             />
             <ImagesToRef />
+            <MapLocal />
             <Testimonials />
 
             <Footer />

@@ -139,6 +139,8 @@ const Testimonios: React.FC = () => {
       textAlign="center"
       p={isHigherThan480 ? "3.5em" : "2em"}
       maxW="100%"
+      pb={isHigherThan480 ? "1.8em" : "0.3em"}
+      mb={isHigherThan480 ? "20px" : "unset"}
     >
       <Heading mt="0" as="h1" mb={5} fontStyle="italic">
         Lo que dicen nuestros clientes...
