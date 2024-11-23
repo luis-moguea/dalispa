@@ -47,7 +47,7 @@ const Navbar = () => {
               onClick={toggleMenu}
               icon={<TbMenu2 fontSize="30px" color="#ffffff" />}
               bg="none"
-              _active={{ bg: "rgba(255, 255, 255, 0.6)" }}
+              _active={{ bg: "#44403f" }}
               size="lg"
               transition="all 0.3s ease"
             />
@@ -55,17 +55,16 @@ const Navbar = () => {
               borderRadius="10px"
               w="110px"
               boxShadow="0 4px 12px rgba(0, 0, 0, 0.15)"
-              gap="10px"
               p="0.7em"
             >
               {/* Elementos del menú */}
               {navbarKeys.map((el, index) => (
-                <MenuItem key={index} borderRadius="10px">
+                <MenuItem key={index} borderRadius="10px" bg="#44403f">
                   <Link
                     style={{ textDecoration: "none" }}
                     to={navbarLinks[index]}
                   >
-                    <Text textAlign="center" color="#020202">
+                    <Text textAlign="center" color="#ffffff">
                       {el}
                     </Text>
                   </Link>
